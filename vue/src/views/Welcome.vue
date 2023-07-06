@@ -9,7 +9,7 @@
       <div class="flex lg:flex-1">
         <a href="#" class="-m-1.5 p-1.5">
           <span class="sr-only">Your Company</span>
-          <img class="h-10 w-auto" src="public/logo2-11@2x.png" alt="" />
+          <img class="h-10 w-auto" src="public/images/logo2-11@2x.png" alt="" />
         </a>
       </div>
       <div class="flex lg:hidden">
@@ -26,7 +26,9 @@
       </PopoverGroup>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <div class="rounded-3xs bg-mediumvioletred-100 w-[110px] h-[45px] flex flex-col items-center justify-center cursor-pointer">
-          <h href="#" class="text-sm font-semibold leading-6 text-white">Log in <span aria-hidden="true">&rarr;</span></h>
+          <router-link
+          :to="{name: login}"
+          class="text-sm font-semibold leading-1 text-white">Log in <span aria-hidden="true">&rarr;</span></router-link>
         </div>
       </div>
     </nav>
@@ -36,7 +38,7 @@
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="public/logo2-11@2x.png" alt="" />
+            <img class="h-8 w-auto" src="public/images/logo2-11@2x.png" alt="" />
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700" @click="mobileMenuOpen = false">
             <span class="sr-only">Close menu</span>
@@ -52,7 +54,9 @@
               <h href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200 cursor-pointer">Pricing</h>
             </div>
             <div class="py-6">
-              <h href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-mediumvioletred-100 hover:text-white">Log in</h>
+              <router-link
+              :to="{name: login}"
+              class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-mediumvioletred-100 hover:text-white">Log in</router-link>
             </div>
           </div>
         </div>
@@ -75,14 +79,15 @@
         >
           Buat survei anda dalam beberapa menit dengan lebih mudah.
         </p>
-        <button 
+        <button
+          :to="{name: Login}"
           class="absolute top-[540px] left-[120px] rounded-3xs bg-mediumvioletred-100 shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[186px] h-[55px] flex flex-row pt-0 px-5 pb-[18px] box-border items-end justify-center gap-[15px] cursor-pointer text-left text-lg"
-          @click="onFrameContainer18Click"
         >
-          <div class="relative tracking-[0.5px] leading-[20px] font-semibold text-white">
+          <a 
+          class="relative tracking-[0.5px] leading-[20px] font-semibold text-white">
             Get Started
-          </div>
-          <img class="relative w-[25px] h-[15.63px]" alt="" src="/vector.svg" />
+          </a>
+          <img class="relative w-[25px] h-[15.63px]" alt="" src="public/images/vector.svg" />
         </button>
       </div>
       <lottie-player class="absolute top-[100px] right-[100px]" src="https://assets4.lottiefiles.com/private_files/lf30_zqp6f9bt.json"  background="transparent"  speed="1"  style="width: 600px; height: 600px;"  loop autoplay></lottie-player>
@@ -93,7 +98,7 @@
     <img
       class="absolute top-[729px] right-[-100px] w-[2275px] h-[790px] opacity-[0.8]"
       alt=""
-      src="/background.svg"
+      src="public/images/background.svg"
     />
     <div
       class="absolute top-[934px] left-[192px] w-[1139px] h-[374px] text-sm text-darkslateblue-100 font-poppins"
@@ -101,7 +106,7 @@
       <img
         class="absolute top-[0px] left-[0px] w-[381px] h-[372px]"
         alt=""
-        src="/skilss.png"
+        src="public/images/skilss.png"
       />
       <div
         class="absolute top-[82px] left-[503px] w-[636px] h-[210px] flex flex-col items-start justify-start gap-[40px] text-justify text-lg text-default-white font-inter"
@@ -109,7 +114,7 @@
         <img
           class="relative w-[300px] h-[60px] object-cover"
           alt=""
-          src="/logo2-1@2x.png"
+          src="public/images/logo2-1@2x.png"
         />
         <div
           class="relative tracking-[0.5px] leading-[22px] flex items-center w-[636px]"
@@ -199,7 +204,7 @@
       <img
         class="absolute h-[87.01%] w-[31.91%] top-[0%] right-[0%] bottom-[12.99%] left-[68.09%] max-w-full overflow-hidden max-h-full object-cover"
         alt=""
-        src="/saly10@2x.png"
+        src="public/images/saly10@2x.png"
       />
     </div>
   </div>
@@ -232,22 +237,22 @@
     <img
       class="absolute h-[9.95%] w-[20.1%] top-[62.67%] right-[83.66%] bottom-[27.37%] left-[-4%] max-w-full overflow-hidden max-h-full"
       alt=""
-      src="/daun-kiri.svg"
+      src="public/images/daun-kiri.svg"
     />
     <img
       class="absolute h-[9.95%] w-[20.1%] top-[62.67%] right-[-5%] bottom-[27.37%] left-[83.66%] max-w-full overflow-hidden max-h-full"
       alt=""
-      src="/daun-kanan.svg"
+      src="public/images/daun-kanan.svg"
     />
     <img
       class="absolute top-[2970px] left-[1258px] w-[316px] h-[272px] object-cover"
       alt=""
-      src="/dayflow-tree@2x.png"
+      src="public/images/dayflow-tree@2x.png"
     />
     <img
       class="absolute top-[2800px] left-[-200px] w-[1219.02px] h-[714px]"
       alt=""
-      src="/bckgrnd-bwh.svg"
+      src="public/images/bckgrnd-bwh.svg"
     />
   </div>
 
@@ -259,7 +264,7 @@
       <img
         class="relative w-[199.87px] h-10 object-cover"
         alt=""
-        src="/logo3-1@2x.png"
+        src="public/images/logo3-1@2x.png"
       />
       <div class="relative leading-[20px]">Copyright © 2023</div>
     </div>
@@ -273,7 +278,6 @@
 
 
 <script setup>
-
   import { ref } from 'vue'
   import {
     Dialog,
@@ -296,8 +300,7 @@
     {
       name: 'Ardiyan Rizki Nugraha_4275',
       role: 'UI Design/ Front-end',
-      imageUrl:
-        'public/ardiyan.jpg',
+      imageUrl: 'public/images/ardiyan.jpg',
     },
     {
       name: 'Ilham Ibnu Pranata_4289',
@@ -330,40 +333,5 @@
         'https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598',
     },
   ]
-  
-
   const mobileMenuOpen = ref(false)
-
-
-</script>
-
-
-<script>
-  import { defineComponent, ref } from "vue";
-
-  export default defineComponent({
-    name: "HomePage",
-    methods: {
-      onFrameContainer18Click() {
-        this.$router.push("/login");
-      },
-      onLoginTextClick() {
-        this.$router.push("/daftar");
-      },
-      onButtonContainer1Click() {
-        this.$router.push("/login");
-      },
-      onAboutTextClick() {
-        const anchor = document.querySelector(
-          "[data-scroll-to='frameContainer']"
-        );
-        if (anchor) {
-          anchor.scrollIntoView({ block: "start", behavior: "smooth" });
-        }
-      },
-      onPriceTextClick() {
-        this.$router.push("/price");
-      },
-    },
-  });
 </script>
