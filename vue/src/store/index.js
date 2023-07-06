@@ -8,6 +8,10 @@ const store = createStore({
       token: sessionStorage.getItem("TOKEN"),
       // token: 1,
     },
+    home: {
+      loading: false,
+      data: {}
+    },
   },
   getters: {},
   actions: {
@@ -33,7 +37,20 @@ const store = createStore({
           commit('logout')
           return response;
         })
-    }
+    },
+    getDashboardData({commit}) {
+      commit('dashboardLoading', true)
+      return axiosClient.get(`/home`)
+      .then((res) => {
+        commit('dashboardLoading', false)
+        commit('setDashboardData', res.data)
+        return res;
+      })
+      .catch(error => {
+        commit('dashboardLoading', false)
+        return error;
+      })
+    },
   },
   mutations: {
     logout: (state) => {
@@ -46,6 +63,12 @@ const store = createStore({
     setToken: (state, token) => {
       state.user.token = token;
       sessionStorage.setItem('TOKEN', token);
+    },
+    dashboardLoading: (state, loading) => {
+      state.home.loading = loading;
+    },
+    setDashboardData: (state, data) => {
+      state.home.data = data
     },
   },
   modules: {},
