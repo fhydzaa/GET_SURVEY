@@ -305,7 +305,7 @@
     {
       name: 'Ilham Ibnu Pranata_4289',
       role: 'Tester',
-      imageUrl: 'public/ilham.jpg',    
+      imageUrl: 'public/images/ilham.jpg',    
     },
     {
       name: 'Dika isnaida_4292',
