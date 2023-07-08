@@ -34,7 +34,6 @@
                 style="animation-delay: 0.1s"
             >
                 <div>
-                    "
                     <img
                         class="mt-4 w-[280px]"
                         alt=""
