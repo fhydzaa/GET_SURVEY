@@ -1,119 +1,133 @@
 <template>
-  <div div class="max-w-7xl mx-auto py-14 px-4 sm:px-6 lg:px-8">
-    <div v-if="loading" class="flex justify-center">Loading...</div>
-    <div
-      v-else
-      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 text-gray-700"
-    >
-      <DashboardCard class="order-1 lg:order-2" style="animation-delay: 0.1s">
-        <template v-slot:title>Total Surveys</template>
+    <div div class="max-w-7xl mx-10 py-14 px-4 sm:px-6 lg:px-8 font-inter">
+        <div v-if="loading" class="flex justify-center">
+            <lottie-player class="flex justify-center" src="https://assets1.lottiefiles.com/packages/lf20_t9gkkhz4.json" speed="1"  style="width: 600px; height: 600px;" loop autoplay>
+            </lottie-player>
+        </div>
         <div
-          class="text-8xl pb-4 font-semibold flex-1 flex items-center justify-center"
+            v-else
+            class="grid grid-cols-1 md:grid-cols-2 gap-10 text-gray-700"
         >
-          {{ data.totalSurveys }}
-        </div>
-      </DashboardCard>
-      <DashboardCard class="order-2 lg:order-4" style="animation-delay: 0.2s">
-        <template v-slot:title>Total Answers</template>
-        <div
-          class="text-8xl pb-4 font-semibold flex-1 flex items-center justify-center"
-        >
-          {{ data.totalAnswers }}
-        </div>
-      </DashboardCard>
-      <DashboardCard
-        class="order-3 lg:order-1 row-span-2"
-        style="animation-delay: 0.2s"
-      >
-        <template v-slot:title>Latest Survey</template>
-        <div v-if="data.latestSurvey">
-          <img
-            :src="data.latestSurvey.image_url"
-            class="w-[240px] mx-auto"
-            alt=""
-          />
-          <h3 class="font-bold text-xl mb-3">{{ data.latestSurvey.title }}</h3>
-          <div class="flex justify-between text-sm mb-1">
-            <div>Create Date:</div>
-            <div>{{ data.latestSurvey.created_at }}</div>
-          </div>
-          <div class="flex justify-between text-sm mb-1">
-            <div>Expire Date:</div>
-            <div>{{ data.latestSurvey.expire_date }}</div>
-          </div>
-          <div class="flex justify-between text-sm mb-1">
-            <div>Status:</div>
-            <div>{{ data.latestSurvey.status ? "Active" : "Draft" }}</div>
-          </div>
-          <div class="flex justify-between text-sm mb-1">
-            <div>Questions:</div>
-            <div>{{ data.latestSurvey.questions }}</div>
-          </div>
-          <div class="flex justify-between text-sm mb-3">
-            <div>Answers:</div>
-            <div>{{ data.latestSurvey.answers }}</div>
-          </div>
-          <div class="flex justify-between">
-            <TButton
-              :to="{ name: 'SurveyView', params: { id: data.latestSurvey.id } }"
-              link
+            <DashboardCard
+                class="order-3 md:order-3 rounded-lg"
+                style="animation-delay: 0.1s"
             >
-              <PencilIcon class="w-5 h-5 mr-2" />
-              Edit Survey
-            </TButton>
+                <template v-slot:title>
+                    <div class="text-xl">
+                        Total Surveys
+                    </div>
+                    
+                
+                </template>
+                <div
+                    class="text-8xl pb-4 font-semibold flex-1 flex items-center justify-center"
+                >
+                    {{ data.totalSurveys }}
+                </div>
+            </DashboardCard>
 
-            <TButton link>
-              <EyeIcon class="w-5 h-5 mr-2" />
-              View Answers
-            </TButton>
-          </div>
-        </div>
-        <div v-else class="text-gray-600 text-center py-16">
-          Your don't have surveys yet
-        </div>
-      </DashboardCard>
-      <DashboardCard class="order-4 lg:order-3 row-span-2" style="animation-delay: 0.3s">
-        <template v-slot:title>
-          <div class="flex justify-between items-center mb-3 px-2">
-            <h3 class="text-2xl font-semibold">Latest Answers</h3>
-            <!-- <a href="javascript:void(0)" class="text-sm text-blue-500 hover:decoration-blue-500">View all</a> -->
-            <a
-              href="/home"
-              onclick="event.preventDefault();"
-              class="text-sm text-blue-500 hover:decoration-blue-500"
+            <DashboardCard
+                class="bg-gradient-to-br from-purple-300 to-br to-pink-300 order-1 md:order-1 row-span-1 rounded-lg"
+                style="animation-delay: 0.1s"
             >
-              View all
-            </a>
-          </div>
-        </template>
+                <div>"
+                    <img class="mt-4 w-[280px]" alt="" src="images/saly25@2x.png" />
+                </div>
+                <div
+                    class="flex flex-1 flex-col justify-center p-6 lg:px-8"
+                >
+                    <div class="font-medium text-lg">
+                        Make surveys easier and faster
+                    </div>
 
-        <div v-if="data.latestAnswers.length" class="text-left">
-          <a
-            href="#"
-            v-for="answer of data.latestAnswers"
-            :key="answer.id"
-            class="block p-2 hover:bg-gray-100/90"
-          >
-            <div class="font-semibold">{{ answer.survey.title }}</div>
-            <small>
-              Answer Made at:
-              <i class="font-semibold">{{ answer.end_date }}</i>
-            </small>
-          </a>
+                    <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm"> 
+                        <form class="space-y-6">
+                            <div class="flex justify-center">
+                                <button
+                                    type="submit"
+                                    class="flex w- justify-center rounded-lg bg-indigo-600 px-5 py-2 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer "
+                                >
+                                    Create survey
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </DashboardCard>
+
+            <DashboardCard
+                class="order-2 md:order-2 row-span-2 rounded-lg"
+                style="animation-delay: 0.2s"
+            >
+                <template v-slot:title>
+                    <div class="text-xl">
+                        Latest Survey
+                    </div>
+                    </template>
+                <div v-if="data.latestSurvey" class="m-4">
+                    <img
+                        :src="data.latestSurvey.image_url"
+                        class="w-[240px] mx-auto  rounded-lg"
+                        alt=""
+                    />
+                    <br>
+                    <h3 class="font-inter text-xl mb-3 flex-1">
+                        {{ data.latestSurvey.title }}
+                    </h3>
+                    <br>
+                    <div class="flex justify-between text-sm mb-1">
+                        <div>Create Date:</div>
+                        <div>{{ data.latestSurvey.created_at }}</div>
+                    </div>
+                    <div class="flex justify-between text-sm mb-1">
+                        <div>Expire Date:</div>
+                        <div>{{ data.latestSurvey.expire_date }}</div>
+                    </div>
+                    <div class="flex justify-between text-sm mb-1">
+                        <div>Status:</div>
+                        <div>
+                            {{ data.latestSurvey.status ? "Active" : "Draft" }}
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm mb-1">
+                        <div>Questions:</div>
+                        <div>{{ data.latestSurvey.questions }}</div>
+                    </div>
+                    <div class="flex justify-between text-sm mb-3">
+                        <div>Answers:</div>
+                        <div>{{ data.latestSurvey.answers }}</div>
+                    </div>
+                    <br>
+                    <div class="flex justify-between">
+                        <TButton
+                            :to="{
+                                name: 'SurveyView',
+                                params: { id: data.latestSurvey.id },
+                            }"
+                            link
+                        >
+                            <PencilIcon class="w-5 h-5 mr-2" />
+                            Edit Survey
+                        </TButton>
+
+                        <TButton link>
+                            <EyeIcon class="w-5 h-5 mr-2" />
+                            View Answers
+                        </TButton>
+                    </div>
+                </div>
+                <div v-else class="text-gray-600 text-center py-16">
+                    Your don't have surveys yet
+                </div>
+            </DashboardCard>
         </div>
-        <div v-else class="text-gray-600 text-center py-16">
-          Your don't have answers yet
-        </div>
-      </DashboardCard>
     </div>
-  </div>
 </template>
 
 <script setup>
-// import {EyeIcon, PencilIcon} from "@heroicons/vue/24/solid"
+import { EyeIcon, PencilIcon } from "@heroicons/vue/24/solid";
 import DashboardCard from "../components/core/DashboardCard.vue";
 import TButton from "../components/core/TButton.vue";
-import PageComponent from "../components/PageComponent.vue";
 import { computed } from "vue";
 import { useStore } from "vuex";
 

@@ -12,10 +12,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('survey_quetions', function (Blueprint $table) {
+        Schema::create('survey_questions', function (Blueprint $table) {
             $table->id();
             $table->string('type', 45);
-            $table->string('quetion', 2000);
+            $table->string('question', 2000);
             $table->longText('description')->nullable();
             $table->longText('data')->nullable();
             $table->foreignIdFor(Survey::class, 'survey_id');            
