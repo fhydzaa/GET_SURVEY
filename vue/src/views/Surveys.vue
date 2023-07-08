@@ -70,7 +70,7 @@
             <div class="grid content-center justify-center py-4 px-6 h-[360px]">
                 <TButton
                     :to="{ name: 'SurveyCreate' }"
-                    class="bg-gradient-to-br from-purple-300 to-br to-pink-300"
+                    class="bg-gradient-to-br from-purple-300 to-br to-pink-300 hover:scale-[0.85px] cursor-pointer"
                 >
                     <PlusIcon class="w-20 h-20 m-4" />
                 </TButton>

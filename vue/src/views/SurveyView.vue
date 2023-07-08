@@ -70,7 +70,7 @@
                             </span>
                             <button
                                 type="button"
-                                class="relative overflow-hidden ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                                class="relative overflow-hidden ml-5 bg-white py-2 px-3 border border-gray-300 rounded-lg shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                             >
                                 <input
                                     type="file"
@@ -174,7 +174,7 @@
                         <button
                             type="button"
                             @click="addQuestion()"
-                            class="flex items-center text-sm py-1 px-4 rounded-sm text-white bg-gray-600 hover:bg-gray-700"
+                            class="flex items-center text-sm py-1 px-4 rounded-lg text-white bg-gray-600 hover:bg-gray-700"
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"

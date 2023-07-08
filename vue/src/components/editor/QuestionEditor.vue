@@ -11,7 +11,7 @@
                 <button
                     type="button"
                     @click="addQuestion()"
-                    class="flex items-center text-xs py-1 px-3 mr-2 rounded-sm text-white bg-gray-600 hover:bg-gray-700"
+                    class="flex items-center text-xs py-1 px-3 mr-2 rounded-lg text-white bg-gray-600 hover:bg-gray-700"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@
                 <button
                     type="button"
                     @click="deleteQuestion()"
-                    class="flex items-center text-xs py-1 px-3 rounded-sm border border-transparent text-red-500 hover:border-red-600"
+                    class="flex items-center text-xs py-1 px-3 rounded-lg border border-transparent text-red-500 hover:border-red-600 cursor-pointer"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -127,7 +127,7 @@
                     <button
                         type="button"
                         @click="addOption()"
-                        class="flex items-center text-xs py-1 px-2 rounded-sm text-white bg-gray-600 hover:bg-gray-700"
+                        class="flex items-center text-xs py-1 px-2 rounded-lg text-white bg-gray-600 hover:bg-gray-700"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +170,7 @@
                     <button
                         type="button"
                         @click="removeOption(option)"
-                        class="h-6 w-6 rounded-full flex items-center justify-center border border-transparent transition-colors hover:border-red-100"
+                        class="h-6 w-6 rounded-lg flex items-center justify-center border border-transparent transition-colors hover:border-red-100"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"

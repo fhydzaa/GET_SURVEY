@@ -1,165 +1,105 @@
 <template>
-  <div
-    class="relative bg-default-white w-full h-[864px] overflow-hidden text-left text-mini text-lightslategray font-inter"
-  >
-    <div
-      class="absolute top-[200px] left-[183px] w-[370px] h-[507px] overflow-hidden"
-    >
-      <div
-        class="absolute h-[92.31%] w-[91.89%] top-[7.69%] right-[0%] bottom-[0%] left-[8.11%] rounded-3xs bg-blueviolet-100"
-      />
-      <b
-        class="absolute top-[calc(50%_+_203.5px)] left-[16.22%] tracking-[1px] text-default-white"
-        >CHOOSE PLAN</b
-      >
-      <div
-        class="absolute h-[84.62%] w-[92.43%] top-[-0.2%] right-[7.84%] bottom-[15.58%] left-[-0.27%] rounded-3xs bg-default-white shadow-[20px_22px_24px_rgba(157,_83,_213,_0.6)] box-border border-[2px] border-solid border-darkgray"
-      />
-      <div
-        class="absolute w-[65.41%] top-[calc(50%_-_68.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Survey controls can view and edit
-      </div>
-      <div
-        class="absolute w-[47.84%] top-[calc(50%_-_28.5px)] left-[10.81%] font-medium inline-block"
-      >
-        50 Responses
-      </div>
-      <div
-        class="absolute w-[47.84%] top-[calc(50%_+_11.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Chat support
-      </div>
-      <div
-        class="absolute h-[0.39%] w-[70.54%] top-[32.25%] right-[18.78%] bottom-[67.36%] left-[10.68%] bg-whitesmoke-200 box-border border-[1px] border-solid border-darkgray"
-      />
-      <div
-        class="absolute h-[9.07%] w-[35.14%] top-[7.89%] right-[54.05%] bottom-[83.04%] left-[10.81%] overflow-hidden flex flex-row items-center justify-start gap-[24px] text-17xl text-darkslateblue-200"
-      >
-        <b class="relative leading-[46px]">$5</b>
-        <div class="relative text-mid font-medium text-lightslategray">
-          /month
+    <div class="bg-white mt-4">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div v-if="loading" class="flex justify-center">
+            <lottie-player
+                class="flex justify-center"
+                src="https://assets1.lottiefiles.com/packages/lf20_t9gkkhz4.json"
+                speed="1"
+                style="width: 600px; height: 600px"
+                loop
+                autoplay
+            >
+            </lottie-player>
         </div>
-      </div>
-      <b
-        class="absolute top-[calc(50%_-_147.5px)] left-[10.81%] text-9xl text-darkslateblue-200"
-        >Personal</b
-      >
-    </div>
-    <div
-      class="absolute top-[200px] left-[583px] w-[370px] h-[507px] overflow-hidden"
-    >
-      <div
-        class="absolute h-[92.31%] w-[91.89%] top-[7.69%] right-[0%] bottom-[0%] left-[8.11%] rounded-3xs bg-mediumblue"
-      />
-      <b
-        class="absolute top-[calc(50%_+_203.5px)] left-[16.22%] tracking-[1px] text-default-white"
-        >CHOOSE PLAN</b
-      >
-      <div
-        class="absolute h-[84.62%] w-[92.43%] top-[-0.2%] right-[7.84%] bottom-[15.58%] left-[-0.27%] rounded-3xs bg-default-white shadow-[20px_22px_24px_rgba(113,_93,_216,_0.8)] box-border border-[2px] border-solid border-darkgray"
-      />
-      <div
-        class="absolute w-[65.95%] top-[calc(50%_-_68.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Survey controls can view and edit
-      </div>
-      <div
-        class="absolute w-[47.84%] top-[calc(50%_-_28.5px)] left-[10.81%] font-medium inline-block"
-      >
-        200 Responses
-      </div>
-      <div
-        class="absolute w-[47.84%] top-[calc(50%_+_11.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Chat support
-      </div>
-      <div
-        class="absolute w-[65.95%] top-[calc(50%_+_51.5px)] left-[10.81%] font-medium inline-block"
-      >
-        All data exports (CSV, XLS, PPT, PDF, SPSS)
-      </div>
-      <div
-        class="absolute h-[0.39%] w-[70.54%] top-[32.25%] right-[18.78%] bottom-[67.36%] left-[10.68%] bg-whitesmoke-200 box-border border-[1px] border-solid border-darkgray"
-      />
-      <div
-        class="absolute h-[9.07%] w-[41.08%] top-[7.89%] right-[48.11%] bottom-[83.04%] left-[10.81%] overflow-hidden flex flex-row items-center justify-start gap-[28px] text-17xl text-darkslateblue-200"
-      >
-        <b class="relative leading-[46px]">$15</b>
-        <div class="relative text-mid font-medium text-lightslategray">
-          /month
+            <div
+                class="mx-auto mt-16 max-w-2xl rounded-3xl ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none"
+            >
+                <div class="p-8 sm:p-10 lg:flex-auto">
+                    <h3 class="text-2xl font-bold tracking-tight text-gray-900">
+                        Lifetime membership
+                    </h3>
+                    <p class="mt-6 text-base leading-7 text-gray-600">
+                        Lorem ipsum dolor sit amet consect etur adipisicing
+                        elit. Itaque amet indis perferendis blanditiis
+                        repellendus etur quidem assumenda.
+                    </p>
+                    <div class="mt-10 flex items-center gap-x-4">
+                        <h4
+                            class="flex-none text-sm font-semibold leading-6 text-indigo-600"
+                        >
+                            What’s included
+                        </h4>
+                        <div class="h-px flex-auto bg-gray-100" />
+                    </div>
+                    <ul
+                        role="list"
+                        class="mt-8 grid grid-cols-1 gap-4 text-sm leading-6 text-gray-600 sm:grid-cols-2 sm:gap-6"
+                    >
+                        <li
+                            v-for="feature in includedFeatures"
+                            :key="feature"
+                            class="flex gap-x-3"
+                        >
+                            <CheckIcon
+                                class="h-6 w-5 flex-none text-indigo-600"
+                                aria-hidden="true"
+                            />
+                            {{ feature }}
+                        </li>
+                    </ul>
+                </div>
+                <div
+                    class="-mt-2 p-2 lg:mt-0 lg:w-full lg:max-w-md lg:flex-shrink-0"
+                >
+                    <div
+                        class="rounded-2xl bg-gray-50 py-10 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:py-16"
+                    >
+                        <div class="mx-auto max-w-xs px-8">
+                            <p class="text-base font-semibold text-gray-600">
+                                Pay once, own it forever
+                            </p>
+                            <p
+                                class="mt-6 flex items-baseline justify-center gap-x-2"
+                            >
+                                <span
+                                    class="text-5xl font-bold tracking-tight text-gray-900"
+                                    >$349</span
+                                >
+                                <span
+                                    class="text-sm font-semibold leading-6 tracking-wide text-gray-600"
+                                    >USD</span
+                                >
+                            </p>
+                            <a
+                                href="#"
+                                class="mt-10 block w-full rounded-md bg-indigo-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                >Get access</a
+                            >
+                            <p class="mt-6 text-xs leading-5 text-gray-600">
+                                Invoices and receipts available for easy company
+                                reimbursement
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <b
-        class="absolute top-[calc(50%_-_147.5px)] left-[10.81%] text-9xl text-darkslateblue-200"
-        >Pro</b
-      >
     </div>
-    <div
-      class="absolute top-[200px] left-[983px] w-[370px] h-[507px] overflow-hidden"
-    >
-      <div
-        class="absolute h-[92.31%] w-[91.89%] top-[7.69%] right-[0%] bottom-[0%] left-[8.11%] rounded-3xs bg-mediumvioletred-200"
-      />
-      <b
-        class="absolute top-[calc(50%_+_203.5px)] left-[16.22%] tracking-[1px] text-default-white"
-        >CONTACT US</b
-      >
-      <div
-        class="absolute h-[84.62%] w-[92.43%] top-[-0.2%] right-[7.84%] bottom-[15.58%] left-[-0.27%] rounded-3xs bg-default-white shadow-[20px_22px_24px_#e14eb1] box-border border-[2px] border-solid border-darkgray"
-      />
-      <div
-        class="absolute w-[65.95%] top-[calc(50%_-_68.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Survey controls can view and edit
-      </div>
-      <div
-        class="absolute w-[47.84%] top-[calc(50%_-_28.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Unlimited Responses
-      </div>
-      <div
-        class="absolute w-[47.84%] top-[calc(50%_+_11.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Chat support
-      </div>
-      <div
-        class="absolute w-[70.27%] top-[calc(50%_+_51.5px)] left-[10.81%] font-medium inline-block"
-      >
-        Custom logo, colors, and survey URL
-      </div>
-      <div
-        class="absolute w-[70.27%] top-[calc(50%_+_109.5px)] left-[10.81%] font-medium inline-block"
-      >
-        UnlimiteAll data exports (CSV, XLS, PPT, PDF, SPSS)d users
-      </div>
-      <div
-        class="absolute h-[0.39%] w-[70.54%] top-[32.25%] right-[18.78%] bottom-[67.36%] left-[10.68%] bg-whitesmoke-200 box-border border-[1px] border-solid border-darkgray"
-      />
-      <div
-        class="absolute h-[9.07%] w-[41.08%] top-[7.89%] right-[48.11%] bottom-[83.04%] left-[10.81%] overflow-hidden flex flex-row items-center justify-start gap-[21px] text-17xl text-darkslateblue-200"
-      >
-        <b class="relative leading-[46px]">$50</b>
-        <div class="relative text-mid font-medium text-lightslategray">
-          /month
-        </div>
-      </div>
-      <b
-        class="absolute top-[calc(50%_-_147.5px)] left-[10.81%] text-9xl text-darkslateblue-200"
-        >Enterprise</b
-      >
-    </div>
-    <div
-      class="absolute top-[80px] left-[450px] text-21xl leading-[20px] font-semibold text-black"
-    >
-      Choose a plan that works for you
-    </div>
-  </div>
 </template>
-<script>
-  import { defineComponent, ref } from "vue";
 
-  export default defineComponent({
-    name: "Price",
-  });
+<script setup>
+import { CheckIcon } from "@heroicons/vue/20/solid";
+import { computed } from "vue";
+import { useStore } from "vuex";
+
+const includedFeatures = [
+    "Private forum access",
+    "Member resources",
+    "Entry to annual conference",
+    "Official member t-shirt",
+];
+const store = useStore();
+
+const loading = computed(() => store.state.home.loading);
 </script>

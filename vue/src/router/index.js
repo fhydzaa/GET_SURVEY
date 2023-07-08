@@ -43,6 +43,11 @@ const routes = [
         name: "SurveyView",
         component: SurveyView,
       },
+      {
+        path: '/price',
+        name: 'Price',
+        component: Price,
+      },
     ],
   },
   {
@@ -50,11 +55,7 @@ const routes = [
     name: 'SurveyPublicView',
     component: SurveyPublicView
   },
-  {
-    path: '/price',
-    name: 'Price',
-    component: Price,
-  },
+
   {
     path: '/page404',
     name: 'Page404',
