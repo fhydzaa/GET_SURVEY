@@ -60,24 +60,39 @@ module.exports = {
         poppins: "Poppins",
         inherit: "inherit",
       },
-      borderRadius: {
-        "3xs": "10px",
-        "11xl": "30px",
-        "259xl-7": "278.7px",
-        xl: "20px",
+      // borderRadius: {
+      //   "3xs": "10px",
+      //   "11xl": "30px",
+      //   "259xl-7": "278.7px",
+      //   xl: "20px",
+      // },
+    },
+    keyframes: {
+      'fade-in-down': {
+        "from": {
+          transform: "translateY(-0.75rem)",
+          opacity: '0'
+        },
+        "to": {
+          transform: "translateY(0rem)",
+          opacity: '1'
+        },
       },
     },
-    fontSize: {
-      base: "16px",
-      lg: "18px",
-      sm: "14px",
-      "21xl": "40px",
-      xl: "20px",
-      mini: "15px",
-      "9xl": "28px",
-      mid: "17px",
-      "17xl": "36px",
+    animation: {
+      'fade-in-down': "fade-in-down 0.2s ease-in-out both",
     },
+    // fontSize: {
+    //   base: "16px",
+    //   lg: "18px",
+    //   sm: "14px",
+    //   "21xl": "40px",
+    //   xl: "20px",
+    //   mini: "15px",
+    //   "9xl": "28px",
+    //   mid: "17px",
+    //   "17xl": "36px",
+    // },
   },
   corePlugins: {
     preflight: false,

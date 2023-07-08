@@ -3,12 +3,14 @@ import Welcome from "../views/Welcome.vue";
 import Login from "../views/Login.vue";
 import Register from "../views/Register.vue";
 import Home from "../views/Home.vue";
-import Activity from "../views/Activity.vue";
-import Test from "../views/Test.vue";
+import Surveys from "../views/Surveys.vue";
+import Price from "../views/Price.vue";
 import DefaultLayout from "../components/DefaultLayout.vue";
 import AuthLayout from "../components/AuthLayout.vue";
 import store from "../store";
-import ActivityView from "../views/ActivityView.vue" 
+import SurveyView from "../views/SurveyView.vue" ;
+import Page404 from "../views/Page404.vue" ;
+import SurveyPublicView from "../views/SurveyPublicView.vue" ;
 
 const routes = [
   {
@@ -27,26 +29,36 @@ const routes = [
         component: Home,
       },
       {
-        path: "/activity",
-        name: "Activity",
-        component: Activity,
+        path: "/surveys",
+        name: "Surveys",
+        component: Surveys,
       },
       {
-        path: "/activity/create",
-        name: "ActivityCreate",
-        component: ActivityView,
+        path: "/surveys/create",
+        name: "SurveyCreate",
+        component: SurveyView,
       },
       {
-        path: "/activity/:id",
-        name: "ActivityView",
-        component: ActivityView,
+        path: "/surveys/:id",
+        name: "SurveyView",
+        component: SurveyView,
       },
     ],
   },
   {
-    path: '/test',
-    name: 'Test',
-    component: Test,
+    path: "/view/survey/:slug",
+    name: 'SurveyPublicView',
+    component: SurveyPublicView
+  },
+  {
+    path: '/price',
+    name: 'Price',
+    component: Price,
+  },
+  {
+    path: '/page404',
+    name: 'Page404',
+    component: Page404,
   },
   {
     path: "/auth",
