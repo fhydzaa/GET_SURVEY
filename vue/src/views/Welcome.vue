@@ -1,17 +1,17 @@
 <template>
     <div
-        class="relative bg-default-white w-full h-[3381px] overflow-hidden text-center text-base text-default-white font-inter"
+        class="relative bg-default-white w-full h-[3310px] overflow-hidden text-center text-base text-default-white font-inter"
     >
-        <header class="bg-[#D8C2E9]">
+        <header>
             <nav
-                class="mx-auto flex max-w-7xl h-[100px] items-center justify-between px-10 lg:px-8"
+                class="mx-auto flex max-w-7xl h-[80px] items-center justify-between px-10 lg:px-8 mt-2 ml-[90px]"
                 aria-label="Global"
             >
                 <div class="flex lg:flex-1">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
                         <img
-                            class="h-10 w-auto"
+                            class="h-7 w-auto"
                             src="public/images/logo2-11@2x.png"
                             alt=""
                         />
@@ -28,7 +28,7 @@
                     </button>
                 </div>
                 <PopoverGroup class="hidden lg:flex lg:gap-x-12">
-                    <h
+                    <!-- <h
                         href="#"
                         class="text-sm font-semibold leading-6 text-gray-900 hover:text-mediumvioletred-100 cursor-pointer"
                         >Home</h
@@ -47,17 +47,17 @@
                         href="#"
                         class="text-sm font-semibold leading-6 text-gray-900 hover:text-mediumvioletred-100 cursor-pointer"
                         >Pricing</h
-                    >
+                    > -->
                 </PopoverGroup>
-                <div class="hidden lg:flex lg:flex-1 lg:justify-end">
+                <div class="hidden lg:flex lg:flex-1 lg:justify-end mr-[60px]">
                     <div
-                        class="rounded-3xs bg-mediumvioletred-100 w-[110px] h-[45px] flex flex-col items-center justify-center cursor-pointer"
+                        class="rounded-lg bg-mediumvioletred-100 w-[110px] h-[45px] flex flex-col items-center justify-center cursor-pointer"
                     >
                         <router-link
-                            :to="{ name: login }"
+                            :to="{ name: 'Login' }"
                             class="text-sm font-semibold leading-1 text-white"
                             >Log in
-                            <span aria-hidden="true">&rarr;</span></router-link
+                            <span class="ml-2 " aria-hidden="true">&rarr;</span></router-link
                         >
                     </div>
                 </div>
@@ -92,7 +92,7 @@
                     </div>
                     <div class="mt-6 flow-root">
                         <div class="-my-6 divide-y divide-gray-500/10">
-                            <div class="space-y-2 py-6">
+                            <!-- <div class="space-y-2 py-6">
                                 <h
                                     href="#"
                                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200 cursor-pointer"
@@ -113,11 +113,11 @@
                                     class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200 cursor-pointer"
                                     >Pricing</h
                                 >
-                            </div>
+                            </div> -->
                             <div class="py-6">
                                 <router-link
                                     :to="{ name: login }"
-                                    class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-mediumvioletred-100 hover:text-white"
+                                    class="mr-4 -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-mediumvioletred-100 hover:text-white"
                                     >Log in</router-link
                                 >
                             </div>
@@ -126,14 +126,13 @@
                 </DialogPanel>
             </Dialog>
         </header>
-
         <div class="flex">
             <div>
                 <h1
-                    class="absolute top-[180px] left-[120px] text-[60px] flex text-darkorchid text-left items-center"
+                    class="absolute top-[180px] left-[120px] text-6xl flex text-darkorchid text-left items-center"
                 >
-                    Solusi Terbaik untuk <br />
-                    Survei Online yang <br />
+                    Solusi Terbaik untuk<br />
+                    Survei Online yang<br />
                     Efisien!
                 </h1>
                 <p
@@ -141,9 +140,9 @@
                 >
                     Buat survei anda dalam beberapa menit dengan lebih mudah.
                 </p>
-                <button
-                    :to="{ name: Login }"
-                    class="absolute top-[540px] left-[120px] rounded-3xs bg-mediumvioletred-100 shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[186px] h-[55px] flex flex-row pt-0 px-5 pb-[18px] box-border items-end justify-center gap-[15px] cursor-pointer text-left text-lg"
+                <router-link
+                    :to="{ name: 'Login' }"
+                    class="absolute top-[540px] left-[120px] rounded-lg bg-mediumvioletred-100 shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[186px] h-[55px] flex flex-row pt-0 px-5 pb-[18px] box-border items-end justify-center gap-[10px] cursor-pointer text-left text-lg"
                 >
                     <a
                         class="relative tracking-[0.5px] leading-[20px] font-semibold text-white"
@@ -155,10 +154,10 @@
                         alt=""
                         src="public/images/vector.svg"
                     />
-                </button>
+                </router-link>
             </div>
             <lottie-player
-                class="absolute top-[100px] right-[100px]"
+                class="absolute top-[100px] right-[100px] "
                 src="https://assets4.lottiefiles.com/private_files/lf30_zqp6f9bt.json"
                 background="transparent"
                 speed="1"
@@ -365,14 +364,14 @@
 
         <div>
             <div
-                class="absolute top-[3256px] left-[0px] bg-darkslategray-100 w-[1536px] h-[125px] overflow-hidden flex flex-col py-0 pr-[668.126953125px] pl-[668px] box-border items-center justify-center gap-[16px]"
+                class="absolute top-[3250px] left-[0px] bg-darkslategray-100 w-[1536px] h-[60px] overflow-hidden flex flex-col py-0 pr-[668.126953125px] pl-[668px] box-border items-center justify-center gap-[4px]"
             >
                 <img
-                    class="relative w-[199.87px] h-10 object-cover"
+                    class="relative w-auto h-6 object-cover"
                     alt=""
                     src="public/images/logo3-1@2x.png"
                 />
-                <div class="relative leading-[20px]">Copyright © 2023</div>
+                <div class="relative text-xs ">Copyright © 2023</div>
             </div>
         </div>
     </div>
@@ -383,12 +382,26 @@ import { ref } from "vue";
 import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
 
+function GetStarted() {
+    router.push({
+        name: "Login",
+    });
+}
+
+function GoLogin() {
+    store.dispatch("logout").then(() => {
+        router.push({
+            name: "Home",
+        });
+    });
+}
+
 const people = [
     {
         name: "Faiq Hidayat Dzakwan_4274",
-        role: "-",
+        role: "Backend",
         imageUrl:
-            "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
+            "public/images/DSC01073.JPG",
     },
     {
         name: "Ardiyan Rizki Nugraha_4275",
@@ -407,7 +420,7 @@ const people = [
     },
     {
         name: "Hardy Wisnu Ramanto_4300",
-        role: "-",
+        role: "Backend",
         imageUrl:
             "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
     },
