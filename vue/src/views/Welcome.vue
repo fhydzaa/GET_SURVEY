@@ -126,7 +126,6 @@
                 </DialogPanel>
             </Dialog>
         </header>
-
         <div class="flex">
             <div>
                 <h1
@@ -136,7 +135,6 @@
                     Survei Online yang<br />
                     Efisien!
                 </h1>
-
                 <p
                     class="absolute top-[480px] left-[120px] text-lg tracking-[0.5px] leading-[20px] text-black text-left"
                 >
@@ -401,7 +399,7 @@ function GoLogin() {
 const people = [
     {
         name: "Faiq Hidayat Dzakwan_4274",
-        role: "-",
+        role: "Backend",
         imageUrl:
             "public/images/DSC01073.JPG",
     },
@@ -412,33 +410,31 @@ const people = [
     },
     {
         name: "Ilham Ibnu Pranata_4289",
-        role: "-",
-        imageUrl:
-            "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
+        role: "Tester",
+        imageUrl: "public/images/Ilham_Ibnu.jpg",
     },
     {
         name: "Dika isnaida_4292",
-        role: "-",
+        role: "Tester",
         imageUrl:
             "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
     },
     {
         name: "Hardy Wisnu Ramanto_4300",
-        role: "-",
+        role: "Backend",
         imageUrl:
             "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
     },
     {
         name: "Lucky Hanindriyo_4313",
-        role: "-",
+        role: "Tester",
         imageUrl:
             "public/images/Lucky.jpg",
     },
     {
         name: "Muhammad Taqiyuddin_4328",
-        role: "-",
-        imageUrl:
-            "public/images/taqi.jpg",
+        role: "Front-end",
+        imageUrl: "public/images/taqi.jpg",
     },
 ];
 const mobileMenuOpen = ref(false);
