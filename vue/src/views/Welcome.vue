@@ -402,9 +402,8 @@ const people = [
     },
     {
         name: "Dika isnaida_4292",
-        role: "-",
-        imageUrl:
-            "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
+        role: "Tester",
+        imageUrl: "public/images/dika.jpg",
     },
     {
         name: "Hardy Wisnu Ramanto_4300",
@@ -415,8 +414,7 @@ const people = [
     {
         name: "Lucky Hanindriyo_4313",
         role: "Tester",
-        imageUrl:
-            "public/images/Lucky.jpg",
+        imageUrl: "public/images/Lucky.jpg",
     },
     {
         name: "Muhammad Taqiyuddin_4328",
