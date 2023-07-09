@@ -7,11 +7,11 @@
               <div class="flex-shrink-0">
                 <img
                 class="h-6 w-auto"
-                src="images/logo2-11@2x.png"
+                src="https://i.postimg.cc/Kctp3wp4/logo2-11-2x.png"
                 alt="Your Company" />
               </div>
               <div class="hidden md:block">
-                <div class="md:ml-[60px] lg:ml-[250px] xl:ml-[350px] flex items-baseline space-x-4">
+                <div class="md:ml-[60px] lg:ml-[250px] xl:ml-[350px] flex items-baseline space-x-4 ">
                   <router-link
                     v-for="item in navigation"
                     :key="item.name"
@@ -19,8 +19,8 @@
                     :class="[
                       this.$route.name === item.to.name
                         ? ''
-                        : 'text-gray-300 hover:bg-gray-100 hover:text-black',
-                      'px-3 py-2 rounded-md text-lg font-bold',
+                        : 'text-gray-300 hover:bg-gray-100 hover:text-black no-underline',
+                      'px-3 py-2 rounded-md text-lg font-bold no-underline',
                     ]"
                     >{{ item.name }}
                   </router-link>
@@ -108,8 +108,8 @@
               :class="[
                 this.$route.name === item.to.name
                   ? ''
-                  : 'text-gray-300 hover:bg-gray-100 hover:text-black',
-                'block px-3 py-2 rounded-md text-base font-medium',
+                  : 'text-gray-300 hover:bg-gray-100 hover:text-black no-underline',
+                'block px-3 py-2 rounded-md text-base font-medium no-underline',
               ]"
               >{{ item.name }}
             </router-link>

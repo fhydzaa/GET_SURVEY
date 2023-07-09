@@ -101,21 +101,22 @@
                         <div>{{ data.latestSurvey.answers }}</div>
                     </div>
                     <br />
-                    <div class="flex justify-between">
+                    <div class="flex justify-between ">
                         <TButton
+                            class="no-underline"
                             :to="{
                                 name: 'SurveyView',
                                 params: { id: data.latestSurvey.id },
                             }"
                             link
                         >
-                            <PencilIcon class="w-5 h-5 mr-2" />
+                            <PencilIcon class="w-5 h-5 mr-2 " />
                             Edit Survey
                         </TButton>
 
                         <TButton link>
                             <EyeIcon class="w-5 h-5 mr-2" />
-                            View Answers
+                            View Answers    
                         </TButton>
                     </div>
                 </div>
