@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-white mt-4">
-        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="bg-white mt-4 font-inter">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8 ">
           <div v-if="loading" class="flex justify-center">
             <lottie-player
                 class="flex justify-center"
@@ -64,7 +64,7 @@
                             >
                                 <span
                                     class="text-5xl font-bold tracking-tight text-gray-900"
-                                    >$349</span
+                                    >$10</span
                                 >
                                 <span
                                     class="text-sm font-semibold leading-6 tracking-wide text-gray-600"

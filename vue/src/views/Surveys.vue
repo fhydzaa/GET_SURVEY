@@ -48,7 +48,7 @@
                         href="#"
                         @click="getForPage($event, link)"
                         aria-current="page"
-                        class="relative inline-flex items-center px-4 py-2 border text-sm font-medium whitespace-nowrap"
+                        class="relative inline-flex items-center px-4 py-2 border text-sm font-medium whitespace-nowrap no-underline"
                         :class="[
                             link.active
                                 ? 'z-10 bg-indigo-50 border-indigo-500 text-indigo-600'

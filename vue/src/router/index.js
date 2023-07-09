@@ -90,7 +90,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   if (to.meta.requiresAuth && !store.state.user.token) {
     next({ name: "Login" });
-  } else if (store.state.user.token && to.meta.isGuest) {
+  } else if (store.state.user.token && (to.meta.isGuest || to.name === "Welcome")) {
     next({ name: "Home" });
   } else {
     next();

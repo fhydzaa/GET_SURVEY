@@ -14,7 +14,7 @@
     <!-- <div v-html="survey.description" class="overflow-hidden flex-1"></div> -->
 
     <div class="flex justify-between items-center mt-3">
-      <TButton :to="{ name: 'SurveyView', params: { id: survey.id } }">
+      <TButton class="no-underline" :to="{ name: 'SurveyView', params: { id: survey.id } }">
         <PencilIcon class="wo-5 h-5 mr-2 " />
         Edit
       </TButton>

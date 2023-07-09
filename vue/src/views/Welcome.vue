@@ -4,65 +4,40 @@
     >
         <header>
             <nav
-                class="mx-auto flex max-w-7xl h-[80px] items-center justify-between px-10 lg:px-8 mt-2 ml-[90px]"
-                aria-label="Global"
+                class="mx-auto flex w-auto h-[80px] items-center justify-between px-10 lg:px-8 mt-2 ml-[90px]"
             >
-                <div class="flex lg:flex-1">
+                <div>
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">Your Company</span>
                         <img
                             class="h-7 w-auto"
-                            src="public/images/logo2-11@2x.png"
+                            src="https://i.postimg.cc/Kctp3wp4/logo2-11-2x.png"
                             alt=""
                         />
                     </a>
                 </div>
-                <div class="flex lg:hidden">
-                    <button
-                        type="button"
-                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
-                        @click="mobileMenuOpen = true"
-                    >
-                        <span class="sr-only">Open main menu</span>
-                        <Bars3Icon class="h-6 w-6" aria-hidden="true" />
-                    </button>
-                </div>
-                <PopoverGroup class="hidden lg:flex lg:gap-x-12">
-                    <!-- <h
-                        href="#"
-                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-mediumvioletred-100 cursor-pointer"
-                        >Home</h
-                    >
-                    <h
-                        href="#"
-                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-mediumvioletred-100 cursor-pointer"
-                        >About</h
-                    >
-                    <h
-                        href="#"
-                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-mediumvioletred-100 cursor-pointer"
-                        >Anggota</h
-                    >
-                    <h
-                        href="#"
-                        class="text-sm font-semibold leading-6 text-gray-900 hover:text-mediumvioletred-100 cursor-pointer"
-                        >Pricing</h
-                    > -->
-                </PopoverGroup>
-                <div class="hidden lg:flex lg:flex-1 lg:justify-end mr-[60px]">
+                <div class="grid grid-cols-2">
                     <div
-                        class="rounded-lg bg-mediumvioletred-100 w-[110px] h-[45px] flex flex-col items-center justify-center cursor-pointer"
+                        class="flex flex-col items-center justify-center cursor-pointer"
+                    >
+                        <Button
+                            @click="GoLogin"
+                            class="rounded-lg relative tracking-[0.5px] bg-white w-[110px] h-[45px] leading-[20px] text-sm text-center font-semibold text-mediumvioletred-100 cursor-pointer"
+                            >Log in</Button
+                        >
+                    </div>
+                    <div
+                        class=" "
                     >
                         <router-link
-                            :to="{ name: 'Login' }"
-                            class="text-sm font-semibold leading-1 text-white"
-                            >Log in
-                            <span class="ml-2 " aria-hidden="true">&rarr;</span></router-link
+                            :to="{ name: 'Register' }"
+                            class="relative rounded-lg bg-mediumvioletred-100 w-[110px] h-[45px]  tracking-[0.5px] leading-[20px] text-sm text-center font-semibold text-white no-underline flex flex-col items-center justify-center cursor-pointer"
+                            >Sign up</router-link
                         >
                     </div>
                 </div>
             </nav>
-            <Dialog
+            <!-- <Dialog
                 as="div"
                 class="lg:hidden font-inter"
                 @close="mobileMenuOpen = false"
@@ -77,7 +52,7 @@
                             <span class="sr-only">Your Company</span>
                             <img
                                 class="h-8 w-auto"
-                                src="public/images/logo2-11@2x.png"
+                                src="https://i.postimg.cc/Kctp3wp4/logo2-11-2x.png"
                                 alt=""
                             />
                         </a>
@@ -92,28 +67,6 @@
                     </div>
                     <div class="mt-6 flow-root">
                         <div class="-my-6 divide-y divide-gray-500/10">
-                            <!-- <div class="space-y-2 py-6">
-                                <h
-                                    href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200 cursor-pointer"
-                                    >Home</h
-                                >
-                                <h
-                                    href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200 cursor-pointer"
-                                    >About</h
-                                >
-                                <h
-                                    href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200 cursor-pointer"
-                                    >Anggota</h
-                                >
-                                <h
-                                    href="#"
-                                    class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-200 cursor-pointer"
-                                    >Pricing</h
-                                >
-                            </div> -->
                             <div class="py-6">
                                 <router-link
                                     :to="{ name: login }"
@@ -124,7 +77,7 @@
                         </div>
                     </div>
                 </DialogPanel>
-            </Dialog>
+            </Dialog> -->
         </header>
         <div class="flex">
             <div>
@@ -140,24 +93,21 @@
                 >
                     Buat survei anda dalam beberapa menit dengan lebih mudah.
                 </p>
-                <router-link
-                    :to="{ name: 'Login' }"
-                    class="absolute top-[540px] left-[120px] rounded-lg bg-mediumvioletred-100 shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[186px] h-[55px] flex flex-row pt-0 px-5 pb-[18px] box-border items-end justify-center gap-[10px] cursor-pointer text-left text-lg"
+                <div
                 >
-                    <a
-                        class="relative tracking-[0.5px] leading-[20px] font-semibold text-white"
+                    <button
+                        @click="GoLogin"
+                        class="absolute top-[540px] left-[120px]  shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[186px] h-[55px] flex flex-row pt-0 px-5 pb-[18px] box-border items-end justify-center gap-[10px] cursor-pointer text-left text-lg rounded-lg bg-mediumvioletred-100 tracking-[0.5px] leading-[20px] font-semibold text-white"
                     >
                         Get Started
-                    </a>
-                    <img
-                        class="relative w-[25px] h-[15.63px]"
-                        alt=""
-                        src="public/images/vector.svg"
-                    />
-                </router-link>
+                    </button>
+                    <ArrowRightIcon
+                        class="relative w-[25px] h-[15.63px] text-white font-bold"
+                    ></ArrowRightIcon>
+                </div>
             </div>
             <lottie-player
-                class="absolute top-[100px] right-[100px] "
+                class="absolute top-[100px] right-[100px]"
                 src="https://assets4.lottiefiles.com/private_files/lf30_zqp6f9bt.json"
                 background="transparent"
                 speed="1"
@@ -364,14 +314,14 @@
 
         <div>
             <div
-                class="absolute top-[3250px] left-[0px] bg-darkslategray-100 w-[1536px] h-[60px] overflow-hidden flex flex-col py-0 pr-[668.126953125px] pl-[668px] box-border items-center justify-center gap-[4px]"
+                class="absolute top-[3250px] left-[0px] bg-darkslategray-100 w-full h-[60px] overflow-hidden flex flex-col py-0 box-border items-center justify-center gap-[4px]"
             >
                 <img
                     class="relative w-auto h-6 object-cover"
                     alt=""
                     src="public/images/logo3-1@2x.png"
                 />
-                <div class="relative text-xs ">Copyright © 2023</div>
+                <div class="relative text-xs">Copyright © 2023</div>
             </div>
         </div>
     </div>
@@ -379,25 +329,21 @@
 
 <script setup>
 import { ref } from "vue";
-import { Dialog, DialogPanel, PopoverGroup } from "@headlessui/vue";
+import { Dialog, DialogPanel } from "@headlessui/vue";
 import { Bars3Icon, XMarkIcon } from "@heroicons/vue/24/outline";
+import { ArrowRightIcon, ArrowLongRightIcon } from "@heroicons/vue/24/solid";
+import { useRouter } from "vue-router";
 
-function GetStarted() {
+const router = useRouter();
+
+function GoLogin() {
     router.push({
         name: "Login",
     });
 }
 
-function GoLogin() {
-    store.dispatch("logout").then(() => {
-        router.push({
-            name: "Home",
-        });
-    });
-}
-
 const people = [
-    {
+{
         name: "Faiq Hidayat Dzakwan_4274",
         role: "Backend",
         imageUrl:
