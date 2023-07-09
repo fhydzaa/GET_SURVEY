@@ -8,7 +8,7 @@
                         link
                         :href="`/view/survey/${model.slug}`"
                         target="_blank"
-                        class="mr-2"
+                        class="mr-2 no-underline"
                     >
                         <ArrowTopRightOnSquareIcon class="w-5 h-5" />
                         View Public link
