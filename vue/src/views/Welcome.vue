@@ -23,6 +23,7 @@
                         <Button
                             @click="GoLogin"
                             class="rounded-lg relative tracking-[0.5px] bg-white w-[110px] h-[45px] leading-[20px] text-sm text-center font-semibold text-mediumvioletred-100 cursor-pointer"
+
                             >Log in</Button
                         >
                     </div>
@@ -346,39 +347,37 @@ const people = [
 {
         name: "Faiq Hidayat Dzakwan_4274",
         role: "Backend",
-        imageUrl:
-            "public/images/DSC01073.JPG",
+        imageUrl: "src/assets/DSC01073.JPG",
     },
     {
         name: "Ardiyan Rizki Nugraha_4275",
         role: "UI Design/ Front-end",
-        imageUrl: "public/images/ardiyan.jpg",
+        imageUrl: "src/assets/ardiyan.jpg",
     },
     {
         name: "Ilham Ibnu Pranata_4289",
         role: "Tester",
-        imageUrl: "public/images/Ilham_Ibnu.jpg",
+        imageUrl: "src/assets/Ilham_Ibnu.jpg",
     },
     {
         name: "Dika isnaida_4292",
         role: "Tester",
-        imageUrl: "public/images/dika.jpg",
+        imageUrl: "src/assets/dika.jpg",
     },
     {
         name: "Hardy Wisnu Ramanto_4300",
         role: "Backend",
-        imageUrl:
-            "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
+        imageUrl: "src/assets/hardy.svg",
     },
     {
         name: "Lucky Hanindriyo_4313",
         role: "Tester",
-        imageUrl: "public/images/Lucky.jpg",
+        imageUrl: "src/assets/Lucky.jpg",
     },
     {
         name: "Muhammad Taqiyuddin_4328",
         role: "Front-end",
-        imageUrl: "public/images/taqi.jpg",
+        imageUrl: "src/assets/taqi.jpg",
     },
 ];
 const mobileMenuOpen = ref(false);
