@@ -22,16 +22,17 @@
                     >
                         <Button
                             @click="GoLogin"
-                            class="rounded-lg relative tracking-[0.5px] bg-white leading-[20px] text-sm text-center font-semibold text-mediumvioletred-100 cursor-pointer"
+                            class="rounded-lg relative tracking-[0.5px] bg-white w-[110px] h-[45px] leading-[20px] text-sm text-center font-semibold text-mediumvioletred-100 cursor-pointer"
+
                             >Log in</Button
                         >
                     </div>
                     <div
-                        class="rounded-lg bg-mediumvioletred-100 w-[110px] h-[45px] flex flex-col items-center justify-center cursor-pointer"
+                        class=" "
                     >
                         <router-link
                             :to="{ name: 'Register' }"
-                            class="relative tracking-[0.5px] leading-[20px] text-sm text-center font-semibold text-white no-underline"
+                            class="relative rounded-lg bg-mediumvioletred-100 w-[110px] h-[45px]  tracking-[0.5px] leading-[20px] text-sm text-center font-semibold text-white no-underline flex flex-col items-center justify-center cursor-pointer"
                             >Sign up</router-link
                         >
                     </div>
@@ -343,7 +344,7 @@ function GoLogin() {
 }
 
 const people = [
-    {
+{
         name: "Faiq Hidayat Dzakwan_4274",
         role: "Backend",
         imageUrl: "src/assets/DSC01073.JPG",
