@@ -2,7 +2,7 @@ import axios from "axios";
 import store from "./store";
 
 const axiosClient = axios.create({
-    baseURL: 'http://localhost:8000/api'
+    baseURL: `${import.meta.env.VITE_API_BASE_URL}/api`
 })
 
 axiosClient.interceptors.request.use(config => {
@@ -16,7 +16,7 @@ axiosClient.interceptors.response.use(response => {
       sessionStorage.removeItem('TOKEN')
       router.push({name: 'Login'})
     } else if (error.response.status === 404) {
-      router.push({name: 'NotFound'})
+      router.push({name: 'Page404'})
     }
     throw error;
   })

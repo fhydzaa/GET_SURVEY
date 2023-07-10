@@ -35,9 +35,9 @@
             >
                 <div>
                     <img
-                        class="mt-4 w-[280px]"
+                        class="mt-4 w-[280px] object-cover"
                         alt=""
-                        src="images/saly25@2x.png"
+                        src="../assets/images/saly25@2x.png"
                     />
                 </div>
                 <div class="flex flex-1 flex-col justify-center p-6 lg:px-8">
@@ -48,12 +48,12 @@
                     <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
                         <form class="space-y-6">
                             <div class="flex justify-center">
-                                <button
-                                    type="submit"
-                                    class="flex w- justify-center rounded-lg bg-indigo-600 px-5 py-2 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
+                                <TButton
+                                    :to="{ name: 'SurveyCreate' }"
+                                    class="flex no-underline w- justify-center rounded-lg bg-indigo-600 px-5 py-2 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
                                 >
                                     Create survey
-                                </button>
+                                </TButton>
                             </div>
                         </form>
                     </div>
@@ -70,7 +70,7 @@
                 <div v-if="data.latestSurvey" class="m-4">
                     <img
                         :src="data.latestSurvey.image_url"
-                        class="w-[240px] mx-auto rounded-lg"
+                        class="w-[240px] mx-auto rounded-lg object-cover"
                         alt=""
                     />
                     <br />
@@ -101,7 +101,7 @@
                         <div>{{ data.latestSurvey.answers }}</div>
                     </div>
                     <br />
-                    <div class="flex justify-between ">
+                    <div class="flex justify-between">
                         <TButton
                             class="no-underline"
                             :to="{
@@ -110,13 +110,20 @@
                             }"
                             link
                         >
-                            <PencilIcon class="w-5 h-5 mr-2 " />
+                            <PencilIcon class="w-5 h-5 mr-2" />
                             Edit Survey
                         </TButton>
 
-                        <TButton link>
+                        <TButton
+                            class="no-underline"
+                            :to="{
+                                name: 'TableView',
+                                params: { id: data.latestSurvey.id },
+                            }"
+                            link
+                        >
                             <EyeIcon class="w-5 h-5 mr-2" />
-                            View Answers    
+                            View Answers
                         </TButton>
                     </div>
                 </div>

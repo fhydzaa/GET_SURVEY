@@ -98,7 +98,7 @@
             <!--/ Question Type -->
         </div>
 
-        <!-- Question Description -->
+         <!-- Question Description -->
         <div class="mt-3 col-span-9">
             <label
                 :for="'question_description_' + model.id"
@@ -113,7 +113,7 @@
                 class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
             />
         </div>
-        <!--/ Question Description -->
+        <!-- / Question Description -->
 
         <!-- Data -->
         <div>

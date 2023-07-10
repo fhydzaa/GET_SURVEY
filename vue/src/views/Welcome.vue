@@ -26,12 +26,10 @@
                             >Log in</Button
                         >
                     </div>
-                    <div
-                        class=" "
-                    >
+                    <div class=" ">
                         <router-link
                             :to="{ name: 'Register' }"
-                            class="relative rounded-lg bg-mediumvioletred-100 w-[110px] h-[45px]  tracking-[0.5px] leading-[20px] text-sm text-center font-semibold text-white no-underline flex flex-col items-center justify-center cursor-pointer"
+                            class="relative rounded-lg bg-mediumvioletred-100 w-[110px] h-[45px] tracking-[0.5px] leading-[20px] text-sm text-center font-semibold text-white no-underline flex flex-col items-center justify-center cursor-pointer"
                             >Sign up</router-link
                         >
                     </div>
@@ -93,11 +91,10 @@
                 >
                     Buat survei anda dalam beberapa menit dengan lebih mudah.
                 </p>
-                <div
-                >
+                <div>
                     <button
                         @click="GoLogin"
-                        class="absolute top-[540px] left-[120px]  shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[186px] h-[55px] flex flex-row pt-0 px-5 pb-[18px] box-border items-end justify-center gap-[10px] cursor-pointer text-left text-lg rounded-lg bg-mediumvioletred-100 tracking-[0.5px] leading-[20px] font-semibold text-white"
+                        class="absolute top-[540px] left-[120px] shadow-[0px_4px_4px_rgba(0,_0,_0,_0.25)] w-[186px] h-[55px] flex flex-row pt-0 px-5 pb-[18px] box-border items-end justify-center gap-[10px] cursor-pointer text-left text-lg rounded-lg bg-mediumvioletred-100 tracking-[0.5px] leading-[20px] font-semibold text-white"
                     >
                         Get Started
                     </button>
@@ -121,7 +118,7 @@
             <img
                 class="absolute top-[729px] right-[-100px] w-[2275px] h-[790px] opacity-[0.8]"
                 alt=""
-                src="public/images/background.svg"
+                src="../assets/images/background.svg"
             />
             <div
                 class="absolute top-[934px] left-[192px] w-[1139px] h-[374px] text-sm text-darkslateblue-100 font-poppins"
@@ -129,7 +126,7 @@
                 <img
                     class="absolute top-[0px] left-[0px] w-[381px] h-[372px]"
                     alt=""
-                    src="public/images/skilss.png"
+                    src="../assets/images/skilss.png"
                 />
                 <div
                     class="absolute top-[82px] left-[503px] w-[636px] h-[210px] flex flex-col items-start justify-start gap-[40px] text-justify text-lg text-default-white font-inter"
@@ -137,7 +134,7 @@
                     <img
                         class="relative w-[300px] h-[60px] object-cover"
                         alt=""
-                        src="public/images/logo2-1@2x.png"
+                        src="../assets/images/logo2-1@2x.png"
                     />
                     <div
                         class="relative tracking-[0.5px] leading-[22px] flex items-center w-[636px]"
@@ -238,7 +235,7 @@
                 <img
                     class="absolute h-[87.01%] w-[31.91%] top-[0%] right-[0%] bottom-[12.99%] left-[68.09%] max-w-full overflow-hidden max-h-full object-cover"
                     alt=""
-                    src="public/images/saly10@2x.png"
+                    src="../assets/images/saly10@2x.png"
                 />
             </div>
         </div>
@@ -293,22 +290,22 @@
             <img
                 class="absolute h-[9.95%] w-[20.1%] top-[62.67%] right-[83.66%] bottom-[27.37%] left-[-4%] max-w-full overflow-hidden max-h-full"
                 alt=""
-                src="public/images/daun-kiri.svg"
+                src="../assets/images/daun-kiri.svg"
             />
             <img
                 class="absolute h-[9.95%] w-[20.1%] top-[62.67%] right-[-5%] bottom-[27.37%] left-[83.66%] max-w-full overflow-hidden max-h-full"
                 alt=""
-                src="public/images/daun-kanan.svg"
+                src="../assets/images/daun-kanan.svg"
             />
             <img
                 class="absolute top-[2970px] left-[1258px] w-[316px] h-[272px] object-cover"
                 alt=""
-                src="public/images/dayflow-tree@2x.png"
+                src="../assets/images/dayflow-tree@2x.png"
             />
             <img
                 class="absolute top-[2800px] left-[-200px] w-[1219.02px] h-[714px]"
                 alt=""
-                src="public/images/bckgrnd-bwh.svg"
+                src="../assets/images/bckgrnd-bwh.svg"
             />
         </div>
 
@@ -317,9 +314,11 @@
                 class="absolute top-[3250px] left-[0px] bg-darkslategray-100 w-full h-[60px] overflow-hidden flex flex-col py-0 box-border items-center justify-center gap-[4px]"
             >
                 <img
-                    class="relative w-auto h-6 object-cover"
+                    height="25"
+                    width="auto"
+                    class="relative object-cover"
                     alt=""
-                    src="public/images/logo3-1@2x.png"
+                    src="../assets/images/logo3-1@2x.png"
                 />
                 <div class="relative text-xs">Copyright © 2023</div>
             </div>
@@ -343,42 +342,40 @@ function GoLogin() {
 }
 
 const people = [
-{
+    {
         name: "Faiq Hidayat Dzakwan_4274",
         role: "Backend",
-        imageUrl:
-            "public/images/DSC01073.JPG",
+        imageUrl: "public/founder/DSC01073.JPG",
     },
     {
         name: "Ardiyan Rizki Nugraha_4275",
         role: "UI Design/ Front-end",
-        imageUrl: "public/images/ardiyan.jpg",
+        imageUrl: "public/founder/ardiyan.jpg",
     },
     {
         name: "Ilham Ibnu Pranata_4289",
         role: "Tester",
-        imageUrl: "public/images/Ilham_Ibnu.jpg",
+        imageUrl: "public/founder/Ilham_Ibnu.jpg",
     },
     {
         name: "Dika isnaida_4292",
         role: "Tester",
-        imageUrl: "public/images/dika.jpg",
+        imageUrl: "public/founder/dika.jpg",
     },
     {
         name: "Hardy Wisnu Ramanto_4300",
         role: "Backend",
-        imageUrl:
-            "https://img.freepik.com/free-photo/orangutang-chilling-out-hammock_181624-45402.jpg?w=826&t=st=1688025295~exp=1688025895~hmac=c8d560db1b3f528a6bb1e210273d804e868ec3d91e751c92d77bc3765bded598",
+        imageUrl: "public/founder/user.svg",
     },
     {
         name: "Lucky Hanindriyo_4313",
         role: "Tester",
-        imageUrl: "public/images/Lucky.jpg",
+        imageUrl: "public/founder/Lucky.jpg",
     },
     {
         name: "Muhammad Taqiyuddin_4328",
         role: "Front-end",
-        imageUrl: "public/images/taqi.jpg",
+        imageUrl: "public/founder/taqi.jpg",
     },
 ];
 const mobileMenuOpen = ref(false);

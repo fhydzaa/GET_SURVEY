@@ -38,7 +38,7 @@
         <form v-else @submit.prevent="saveSurvey" class="animate-fade-in-down">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
                 <!-- Survey Fields -->
-                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                <div class="px-4 py-5 bg-white space-y-6 sm:p-6 mr-6">
                     <!-- Image -->
                     <div>
                         <label class="block text-sm font-medium text-gray-700">

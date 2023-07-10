@@ -10,6 +10,7 @@ import AuthLayout from "../components/AuthLayout.vue";
 import store from "../store";
 import SurveyView from "../views/SurveyView.vue" ;
 import Page404 from "../views/Page404.vue" ;
+import TableView from "../views/TableView.vue" ;
 import SurveyPublicView from "../views/SurveyPublicView.vue" ;
 
 const routes = [
@@ -47,6 +48,16 @@ const routes = [
         path: '/price',
         name: 'Price',
         component: Price,
+      },
+      {
+        path: '/surveys/table/create',
+        name: 'TableCreate',
+        component: TableView,
+      },
+      {
+        path: '/surveys/table/:id',
+        name: 'TableView',
+        component: TableView,
       },
     ],
   },
