@@ -37,7 +37,7 @@
                     <img
                         class="mt-4 w-[280px]"
                         alt=""
-                        src="images/saly25@2x.png"
+                        src="../../public/images/saly25@2x.png"
                     />
                 </div>
                 <div class="flex flex-1 flex-col justify-center p-6 lg:px-8">

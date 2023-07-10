@@ -35,7 +35,7 @@
             >
             </lottie-player>
         </div>
-        <form v-else @submit.prevent="saveSurvey" class="animate-fade-in-down">
+        <form v-else @submit.prevent="saveSurvey" class="animate-fade-in-down ">
             <div class="shadow sm:rounded-md sm:overflow-hidden">
                 <!-- Survey Fields -->
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
@@ -85,7 +85,7 @@
                     <!--/ Image -->
 
                     <!-- Title -->
-                    <div>
+                    <div class="mr-7">
                         <label
                             for="title"
                             class="block text-sm font-medium text-gray-700"
@@ -103,7 +103,7 @@
                     <!--/ Title -->
 
                     <!-- Description -->
-                    <div>
+                    <div class="mr-7">
                         <label
                             for="about"
                             class="block text-sm font-medium text-gray-700"
@@ -125,7 +125,7 @@
                     <!-- Description -->
 
                     <!-- Expire Date -->
-                    <div>
+                    <div class="mr-7">
                         <label
                             for="expire_date"
                             class="block text-sm font-medium text-gray-700"
@@ -164,7 +164,7 @@
                 </div>
                 <!--/ Survey Fields -->
 
-                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                <div class="px-4 py-5 bg-white space-y-6 sm:p-6 " >
                     <h1
                         class="text-2xl font-semibold flex items-center justify-between"
                     >
@@ -212,9 +212,11 @@
                     </div>
                 </div>
 
-                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-                    <TButton>
-                        <ArrowDownOnSquareIcon class="w-5 h-5 mr-2" />
+                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 ">
+                    <TButton
+                    class="cursor-pointer"
+                    >
+                        <ArrowDownOnSquareIcon class="w-5 h-5 mr-2 " />
                         Save
                     </TButton>
                 </div>
