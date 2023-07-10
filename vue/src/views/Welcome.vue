@@ -367,7 +367,7 @@ const people = [
     {
         name: "Hardy Wisnu Ramanto_4300",
         role: "Backend",
-        imageUrl: "src/assets/hardy.svg",
+        imageUrl: "src/assets/hardy_jpg",
     },
     {
         name: "Lucky Hanindriyo_4313",
