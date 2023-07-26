@@ -8,11 +8,11 @@
     >
       <div class="card-body">
         <div
-          class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8"
+          class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 font-inter"
         >
           <div class="sm:mx-auto sm:w-full sm:max-w-sm">
             <h2
-              class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-pink-500"
+              class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-mediumvioletred-100"
             >
               Register
             </h2>
@@ -20,7 +20,7 @@
 
           <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
             <form class="space-y-6">
-              <div class="mb-3">
+              <div class="mb-3 mr-6">
                 <div class="grid grid-cols-2 gap-8">
                   <div class="...">
                     <label
@@ -61,7 +61,7 @@
                   class="block text-sm font-medium leading-6 text-gray-900"
                   >Email
                 </label>
-                <div class="mt-2">
+                <div class="mt-2 mr-6">
                   <input
                     id="email"
                     name="email"
@@ -81,7 +81,7 @@
                     >Password</label
                   >
                 </div>
-                <div class="mt-2">
+                <div class="mt-2 mr-6">
                   <input
                     id="password"
                     name="password"
@@ -101,7 +101,7 @@
                     >Confirm password</label
                   >
                 </div>
-                <div class="mt-2">
+                <div class="mt-2 mr-6">
                   <input
                     id="password_confirmation"
                     name="password_confirmation"
@@ -117,7 +117,7 @@
                 <button
                   @click="register"
                   type="submit"
-                  class="flex w-40 justify-center rounded-full bg-pink-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-pink-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  class="flex w-40 justify-center rounded-full bg-mediumvioletred-200 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-mediumvioletred-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 >
                   Register
                 </button>

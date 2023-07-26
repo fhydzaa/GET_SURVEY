@@ -14,7 +14,7 @@
         </div>
         <div v-else-if="surveys.data.length">
             <div
-                class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 mt-4"
+                class="grid grid-cols-1 gap-5 sm:grid-cols-2 md:grid-cols-3 mt-4 font-inter"
             >
                 <div
                     class="grid content-center justify-center py-4 px-6 h-[360px]"

@@ -8,11 +8,11 @@
         >
             <div class="card-body">
                 <div
-                    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8"
+                    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 font-inter"
                 >
                     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                         <h2
-                            class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-purple-700"
+                            class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-mediumslateblue-100"
                         >
                             Login
                         </h2>
@@ -26,7 +26,7 @@
                                     class="block text-sm font-medium leading-6 text-gray-900"
                                     >Email address</label
                                 >
-                                <div class="mt-2">
+                                <div class="mt-2 mr-6">
                                     <input
                                         id="email"
                                         name="email"
@@ -46,7 +46,7 @@
                                         >Password</label
                                     >
                                 </div>
-                                <div class="mt-2">
+                                <div class="mt-2 mr-6">
                                     <input
                                         id="password"
                                         name="password"
@@ -72,7 +72,7 @@
                             Not a member? {{ " " }}
                             <router-link
                                 :to="{ name: 'Register' }"
-                                class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+                                class="font-semibold leading-6 text-pink-600 hover:text-pink-500"
                                 >Register</router-link
                             >
                         </p>

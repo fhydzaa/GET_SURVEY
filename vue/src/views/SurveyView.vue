@@ -1,6 +1,6 @@
 <template>
     <PageComponent>
-        <div class="max-w-7xl mx-auto py-2 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto py-2 sm:px-6 lg:px-8 font-inter">
             <div class="flex items-center justify-end">
                 <div class="flex">
                     <TButton
@@ -36,7 +36,7 @@
             </lottie-player>
         </div>
         <form v-else @submit.prevent="saveSurvey" class="animate-fade-in-down ">
-            <div class="shadow sm:rounded-md sm:overflow-hidden">
+            <div class="shadow sm:rounded-md sm:overflow-hidden font-inter">
                 <!-- Survey Fields -->
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                     <!-- Image -->
@@ -149,7 +149,7 @@
                                 name="status"
                                 type="checkbox"
                                 v-model="model.status"
-                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+                                class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded bg-gray-300"
                             />
                         </div>
                         <div class="ml-3 text-sm">

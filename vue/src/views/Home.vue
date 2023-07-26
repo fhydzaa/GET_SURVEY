@@ -48,12 +48,12 @@
                     <div class="mt-4 sm:mx-auto sm:w-full sm:max-w-sm">
                         <form class="space-y-6">
                             <div class="flex justify-center">
-                                <button
-                                    type="submit"
-                                    class="flex w- justify-center rounded-lg bg-indigo-600 px-5 py-2 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer"
+                                <TButton
+                                    :to="{ name: 'SurveyCreate' }"
+                                    class="flex w- justify-center rounded-lg bg-indigo-600 px-5 py-2 text-xl font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-pointer no-underline"
                                 >
                                     Create survey
-                                </button>
+                                </TButton>
                             </div>
                         </form>
                     </div>
