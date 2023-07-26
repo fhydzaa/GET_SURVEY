@@ -78,7 +78,7 @@
                         :class="[
                           'block px-4 py-2 text-sm text-black hover:bg-gray-100 cursor-pointer',
                         ]"
-                        >Sign out</a
+                        >Logout</a
                       >
                     </MenuItem>
                   </MenuItems>
@@ -143,7 +143,7 @@
               as="a"
               @click="logout"
               class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-black hover:bg-gray-100 cursor-pointer"
-              >Sign out
+              >Logout
             </DisclosureButton>
           </div>
         </div>
@@ -198,7 +198,7 @@ export default {
     function logout() {
       store.dispatch("logout").then(() => {
         router.push({
-          name: "Login",
+          name: "Welcome",
         });
       });
     }

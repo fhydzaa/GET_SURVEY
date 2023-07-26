@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- Question index -->
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between ">
             <h3 class="text-lg font-bold">
                 {{ index + 1 }}. {{ model.question }}
             </h3>
@@ -33,7 +33,7 @@
                 <button
                     type="button"
                     @click="deleteQuestion()"
-                    class="flex items-center text-xs py-1 px-3 rounded-lg border border-transparent text-red-500 hover:border-red-600 cursor-pointer"
+                    class="flex items-center text-xs py-1 px-3 rounded-lg border border-transparent cursor-pointer text-red-500 hover:border-red-600"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@
         <!--/ Question index -->
         <div class="grid gap-3 grid-cols-12">
             <!-- Question -->
-            <div class="mt-3 col-span-9">
+            <div class="mt-3 col-span-9 mr-7">
                 <label
                     :for="'question_text_' + model.data"
                     class="block text-sm font-medium text-gray-700"
@@ -73,7 +73,7 @@
             <!--/ Question -->
 
             <!-- Question Type -->
-            <div class="mt-3 col-span-3">
+            <div class="mt-3 col-span-3 ">
                 <label
                     for="question_type"
                     class="block text-sm font-medium text-gray-700"
@@ -102,7 +102,7 @@
         <div class="mt-3 col-span-9">
             <label
                 :for="'question_description_' + model.id"
-                class="block text-sm font-medium text-gray-700"
+                class="block text-sm font-medium text-gray-700 "
                 >Description</label
             >
             <textarea

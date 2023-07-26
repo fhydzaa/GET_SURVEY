@@ -38,47 +38,6 @@
                     </div>
                 </div>
             </nav>
-            <!-- <Dialog
-                as="div"
-                class="lg:hidden font-inter"
-                @close="mobileMenuOpen = false"
-                :open="mobileMenuOpen"
-            >
-                <div class="fixed inset-0 z-10" />
-                <DialogPanel
-                    class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10"
-                >
-                    <div class="flex items-center justify-between">
-                        <a href="#" class="-m-1.5 p-1.5">
-                            <span class="sr-only">Your Company</span>
-                            <img
-                                class="h-8 w-auto"
-                                src="https://i.postimg.cc/Kctp3wp4/logo2-11-2x.png"
-                                alt=""
-                            />
-                        </a>
-                        <button
-                            type="button"
-                            class="-m-2.5 rounded-md p-2.5 text-gray-700"
-                            @click="mobileMenuOpen = false"
-                        >
-                            <span class="sr-only">Close menu</span>
-                            <XMarkIcon class="h-6 w-6" aria-hidden="true" />
-                        </button>
-                    </div>
-                    <div class="mt-6 flow-root">
-                        <div class="-my-6 divide-y divide-gray-500/10">
-                            <div class="py-6">
-                                <router-link
-                                    :to="{ name: login }"
-                                    class="mr-4 -mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-mediumvioletred-100 hover:text-white"
-                                    >Log in</router-link
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </DialogPanel>
-            </Dialog> -->
         </header>
         <div class="flex">
             <div>
@@ -122,7 +81,7 @@
             <img
                 class="absolute top-[729px] right-[-100px] w-[2275px] h-[790px] opacity-[0.8]"
                 alt=""
-                src="public/images/background.svg"
+                src="../../public/images/background.svg"
             />
             <div
                 class="absolute top-[934px] left-[192px] w-[1139px] h-[374px] text-sm text-darkslateblue-100 font-poppins"
@@ -130,7 +89,7 @@
                 <img
                     class="absolute top-[0px] left-[0px] w-[381px] h-[372px]"
                     alt=""
-                    src="public/images/skilss.png"
+                    src="../../public/images/skilss.png"
                 />
                 <div
                     class="absolute top-[82px] left-[503px] w-[636px] h-[210px] flex flex-col items-start justify-start gap-[40px] text-justify text-lg text-default-white font-inter"
@@ -138,7 +97,7 @@
                     <img
                         class="relative w-[300px] h-[60px] object-cover"
                         alt=""
-                        src="public/images/logo2-1@2x.png"
+                        src="../../public/images/logo2-1@2x.png"
                     />
                     <div
                         class="relative tracking-[0.5px] leading-[22px] flex items-center w-[636px]"
@@ -239,7 +198,7 @@
                 <img
                     class="absolute h-[87.01%] w-[31.91%] top-[0%] right-[0%] bottom-[12.99%] left-[68.09%] max-w-full overflow-hidden max-h-full object-cover"
                     alt=""
-                    src="public/images/saly10@2x.png"
+                    src="../../public/images/saly10@2x.png"
                 />
             </div>
         </div>
@@ -294,22 +253,22 @@
             <img
                 class="absolute h-[9.95%] w-[20.1%] top-[62.67%] right-[83.66%] bottom-[27.37%] left-[-4%] max-w-full overflow-hidden max-h-full"
                 alt=""
-                src="public/images/daun-kiri.svg"
+                src="../../public/images/daun-kiri.svg"
             />
             <img
                 class="absolute h-[9.95%] w-[20.1%] top-[62.67%] right-[-5%] bottom-[27.37%] left-[83.66%] max-w-full overflow-hidden max-h-full"
                 alt=""
-                src="public/images/daun-kanan.svg"
+                src="../../public/images/daun-kanan.svg"
             />
             <img
                 class="absolute top-[2970px] left-[1258px] w-[316px] h-[272px] object-cover"
                 alt=""
-                src="public/images/dayflow-tree@2x.png"
+                src="../../public/images/dayflow-tree@2x.png"
             />
             <img
                 class="absolute top-[2800px] left-[-200px] w-[1219.02px] h-[714px]"
                 alt=""
-                src="public/images/bckgrnd-bwh.svg"
+                src="../../public/images/bckgrnd-bwh.svg"
             />
         </div>
 
@@ -320,7 +279,7 @@
                 <img
                     class="relative w-auto h-6 object-cover"
                     alt=""
-                    src="public/images/logo3-1@2x.png"
+                    src="../../public/images/logo3-1@2x.png"
                 />
                 <div class="relative text-xs">Copyright © 2023</div>
             </div>
@@ -346,23 +305,23 @@ function GoLogin() {
 const people = [
 {
         name: "Faiq Hidayat Dzakwan_4274",
-        role: "Backend",
-        imageUrl: "src/assets/DSC01073.JPG",
+        role: "Fullstack",
+        imageUrl: "../../public/founder/DSC01073.JPG",
     },
     {
         name: "Ardiyan Rizki Nugraha_4275",
         role: "UI Design/ Front-end",
-        imageUrl: "src/assets/ardiyan.jpg",
+        imageUrl: "../../public/founder/ardiyan.jpg",
     },
     {
         name: "Ilham Ibnu Pranata_4289",
         role: "Tester",
-        imageUrl: "src/assets/Ilham_Ibnu.jpg",
+        imageUrl: "../../public/founder/Ilham_Ibnu.jpg",
     },
     {
         name: "Dika isnaida_4292",
         role: "Tester",
-        imageUrl: "src/assets/dika.jpg",
+        imageUrl: "../../public/founder/dika.jpg",
     },
     {
         name: "Hardy Wisnu Ramanto_4300",
@@ -372,12 +331,12 @@ const people = [
     {
         name: "Lucky Hanindriyo_4313",
         role: "Tester",
-        imageUrl: "src/assets/Lucky.jpg",
+        imageUrl: "../../public/founder/Lucky.jpg",
     },
     {
         name: "Muhammad Taqiyuddin_4328",
         role: "Front-end",
-        imageUrl: "src/assets/taqi.jpg",
+        imageUrl: "../../public/founder/taqi.jpg",
     },
 ];
 const mobileMenuOpen = ref(false);
