@@ -35,7 +35,7 @@
             >
             </lottie-player>
         </div>
-        <form v-else @submit.prevent="saveSurvey" class="animate-fade-in-down ">
+        <form v-else @submit.prevent="saveSurvey" class="animate-fade-in-down">
             <div class="shadow sm:rounded-md sm:overflow-hidden font-inter">
                 <!-- Survey Fields -->
                 <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
@@ -164,7 +164,7 @@
                 </div>
                 <!--/ Survey Fields -->
 
-                <div class="px-4 py-5 bg-white space-y-6 sm:p-6 " >
+                <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
                     <h1
                         class="text-2xl font-semibold flex items-center justify-between"
                     >
@@ -212,11 +212,26 @@
                     </div>
                 </div>
 
-                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6 ">
-                    <TButton
-                    class="cursor-pointer"
-                    >
-                        <ArrowDownOnSquareIcon class="w-5 h-5 mr-2 " />
+                <div class="px-6">
+                    <Alert
+                    v-if="Object.keys(errors).length"
+                    class="flex-col items-stretch text-sm"
+                >
+                    <div v-for="(field, i) of Object.keys(errors)" :key="i">
+                        <div
+                            v-for="(error, ind) of errors[field] || []"
+                            :key="ind"
+                        >
+                            * {{ error }}
+                        </div>
+                    </div>
+                </Alert>
+                </div>
+                
+
+                <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                    <TButton class="cursor-pointer">
+                        <ArrowDownOnSquareIcon class="w-5 h-5 mr-2" />
                         Save
                     </TButton>
                 </div>
@@ -229,6 +244,7 @@
 import { v4 as uuidv4 } from "uuid";
 import { computed, ref, watch } from "vue";
 import { useRoute, useRouter } from "vue-router";
+import Alert from "../components/Alert.vue";
 import {
     ArrowDownOnSquareIcon,
     TrashIcon,
@@ -243,6 +259,7 @@ const router = useRouter();
 
 const route = useRoute();
 
+const errors = ref({});
 // Get survey loading state, which only changes when we fetch survey from backend
 const surveyLoading = computed(() => store.state.currentSurvey.loading);
 
@@ -336,6 +353,11 @@ function saveSurvey() {
             name: "SurveyView",
             params: { id: data.data.id },
         });
+    })
+    .catch((err) => {
+      if (err.response.status === 422) {
+        errors.value = err.response.data.errors;
+      }
     });
 }
 

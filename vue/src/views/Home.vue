@@ -114,7 +114,11 @@
                             Edit Survey
                         </TButton>
 
-                        <TButton link>
+                        <TButton 
+                            class="no-underline"
+                            :to="{
+                                name: 'ComingSoon'
+                            }">
                             <EyeIcon class="w-5 h-5 mr-2" />
                             View Answers    
                         </TButton>

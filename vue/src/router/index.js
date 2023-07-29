@@ -11,12 +11,24 @@ import store from "../store";
 import SurveyView from "../views/SurveyView.vue";
 import Page404 from "../views/Page404.vue";
 import SurveyPublicView from "../views/SurveyPublicView.vue";
+import Responder from "../views/Responder.vue";
+import ComingSoon from "../views/ComingSoon.vue";
 
 const routes = [
     {
         path: "/",
         name: "Welcome",
         component: Welcome,
+    },
+    {
+        path: "/comingsoon",
+        name: "ComingSoon",
+        component: ComingSoon,
+    },
+    {
+        path: "/responder",
+        name: "Responder",
+        component: Responder,
     },
     {
         path: "/home",

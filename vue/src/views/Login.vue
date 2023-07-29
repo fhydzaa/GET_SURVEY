@@ -20,6 +20,46 @@
 
                     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                         <form class="space-y-6">
+                            <!-- <Alert
+                                v-if="Object.keys(errorMsg).length"
+                                class="flex-col items-stretch text-sm"
+                            >
+                                <div
+                                    v-for="(field, i) of Object.keys(errorMsg)"
+                                    :key="i"
+                                >
+                                    <div
+                                        v-for="(error, ind) of errorMsg[
+                                            field
+                                        ] || []"
+                                        :key="ind"
+                                    >
+                                        * {{ error }}
+                                    </div>
+                                </div>
+                            </Alert> -->
+                            <Alert v-if="errorMsg">
+                                {{ errorMsg }}
+                                <span
+                                    @click="errorMsg = ''"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full transition-colors cursor-pointer hover:bg-[rgba(0,0,0,0.2)]"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </span>
+                            </Alert>
                             <div>
                                 <label
                                     for="email"
@@ -87,6 +127,7 @@
 import store from "../store";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
+import Alert from "../components/Alert.vue";
 
 const router = useRouter();
 
@@ -107,7 +148,7 @@ function login(ev) {
             });
         })
         .catch((err) => {
-            errorMsg.value = err.response.data.error;
-        });
+      errorMsg.value = err.response.data.error;
+    });
 }
 </script>
