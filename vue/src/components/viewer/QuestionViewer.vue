@@ -34,7 +34,7 @@
             :value="option.text"
             @change="emits('update:modelValue', $event.target.value)"
             type="radio"
-            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300"
+            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 bg-gray-300"
           />
           <label
             :for="option.uuid"
@@ -55,7 +55,7 @@
             v-model="model[option.text]"
             @change="onCheckboxChange"
             type="checkbox"
-            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded"
+            class="focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 bg-gray-300 rounded"
           />
           <label
             :for="option.uuid"
@@ -65,7 +65,7 @@
           </label>
         </div>
       </div>
-      <div v-else-if="question.type === 'text'">
+      <div v-else-if="question.type === 'text'" class="mr-6">
         <input
           type="text"
           :value="modelValue"
@@ -73,7 +73,7 @@
           class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
         />
       </div>
-      <div v-else-if="question.type === 'textarea'">
+      <div v-else-if="question.type === 'textarea'" class="mr-6">
         <textarea
           :value="modelValue"
           @input="emits('update:modelValue', $event.target.value)"

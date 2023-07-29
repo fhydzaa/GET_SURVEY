@@ -73,7 +73,7 @@
             <!--/ Question -->
 
             <!-- Question Type -->
-            <div class="mt-3 col-span-3 ">
+            <div class="mt-3 col-span-3 mr-1">
                 <label
                     for="question_type"
                     class="block text-sm font-medium text-gray-700"
@@ -99,7 +99,7 @@
         </div>
 
         <!-- Question Description -->
-        <div class="mt-3 col-span-9">
+        <div class="mt-3 col-span-9 mr-7">
             <label
                 :for="'question_description_' + model.id"
                 class="block text-sm font-medium text-gray-700 "

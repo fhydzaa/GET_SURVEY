@@ -8,11 +8,11 @@
         >
             <div class="card-body">
                 <div
-                    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8"
+                    class="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8 font-inter"
                 >
                     <div class="sm:mx-auto sm:w-full sm:max-w-sm">
                         <h2
-                            class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-purple-700"
+                            class="mt-10 text-center text-4xl font-bold leading-9 tracking-tight text-mediumslateblue-100"
                         >
                             Login
                         </h2>
@@ -20,13 +20,53 @@
 
                     <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
                         <form class="space-y-6">
+                            <!-- <Alert
+                                v-if="Object.keys(errorMsg).length"
+                                class="flex-col items-stretch text-sm"
+                            >
+                                <div
+                                    v-for="(field, i) of Object.keys(errorMsg)"
+                                    :key="i"
+                                >
+                                    <div
+                                        v-for="(error, ind) of errorMsg[
+                                            field
+                                        ] || []"
+                                        :key="ind"
+                                    >
+                                        * {{ error }}
+                                    </div>
+                                </div>
+                            </Alert> -->
+                            <Alert v-if="errorMsg">
+                                {{ errorMsg }}
+                                <span
+                                    @click="errorMsg = ''"
+                                    class="w-8 h-8 flex items-center justify-center rounded-full transition-colors cursor-pointer hover:bg-[rgba(0,0,0,0.2)]"
+                                >
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        class="h-6 w-6"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                    >
+                                        <path
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"
+                                        />
+                                    </svg>
+                                </span>
+                            </Alert>
                             <div>
                                 <label
                                     for="email"
                                     class="block text-sm font-medium leading-6 text-gray-900"
                                     >Email address</label
                                 >
-                                <div class="mt-2">
+                                <div class="mt-2 mr-6">
                                     <input
                                         id="email"
                                         name="email"
@@ -46,7 +86,7 @@
                                         >Password</label
                                     >
                                 </div>
-                                <div class="mt-2">
+                                <div class="mt-2 mr-6">
                                     <input
                                         id="password"
                                         name="password"
@@ -72,7 +112,7 @@
                             Not a member? {{ " " }}
                             <router-link
                                 :to="{ name: 'Register' }"
-                                class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
+                                class="font-semibold leading-6 text-pink-600 hover:text-pink-500"
                                 >Register</router-link
                             >
                         </p>
@@ -87,6 +127,7 @@
 import store from "../store";
 import { useRouter } from "vue-router";
 import { ref } from "vue";
+import Alert from "../components/Alert.vue";
 
 const router = useRouter();
 
@@ -107,7 +148,7 @@ function login(ev) {
             });
         })
         .catch((err) => {
-            errorMsg.value = err.response.data.error;
-        });
+      errorMsg.value = err.response.data.error;
+    });
 }
 </script>

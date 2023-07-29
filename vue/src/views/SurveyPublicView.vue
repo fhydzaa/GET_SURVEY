@@ -1,5 +1,5 @@
 <template>
-    <div class="py-5 px-8">
+    <div class="py-5 px-8 font-inter">
       <div v-if="loading" class="flex justify-center">
         <lottie-player
           class="flex justify-center"
